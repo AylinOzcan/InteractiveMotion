@@ -14,17 +14,20 @@
       <input type="text" id="pseudoInput" placeholder="Choose a pseudoname" maxlength="14"> 
       <input type="submit" id="formButton" value="Get connected"></button>
     </form>
+    <p id="login-info"></p>
   </div>
 
   <main id="connect-page">
     <h3> Lets connect!</h3>
+    <p id="connect-info"></p>
     <!-- message switchedModel here -->
     <!-- messages from who joined/left here -->
-    <!-- maybe posenet camera here -->
-    <video id="video">
-    </video>
-    <canvas></canvas>
+    <div id="mainPosenet">
+      <video id="video" playsinline style="display: none;"> </video>
+      <canvas id="output"></canvas>
+    </div> 
   </main>
+  
   <script type="text/javascript" src="./js/main.js"></script>
   <script type="module" src="./js/three.js"></script>
 </body>

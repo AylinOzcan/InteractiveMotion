@@ -1,3 +1,5 @@
+// Adapted from code at https://github.com/socketio/socket.io/blob/master/examples/chat/index.js
+
 const express = require('express');
 const app = express();
 const http = require('http');

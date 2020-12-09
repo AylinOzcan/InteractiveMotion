@@ -1,4 +1,7 @@
+// Adapted from code at https://github.com/ionif/posenetToThreejs/blob/master/server/index.html and https://github.com/socketio/socket.io/blob/4e6d40493da3a6858f122fa5b09c4974195b868b/examples/cluster-haproxy/server/public/main.js
+
 let keypoints;    // Posenet keypoints
+
 $(() => {
   'use strict';
   console.log('DOM Ready!');
@@ -8,7 +11,9 @@ $(() => {
   const pseudoInput = $('#pseudoInput');   // pseudoname input of user
   const formButton = $('#formButton');   // Button from form 
   const loginPage = $('#login-page');    // Login page
+  const loginMessage = $('#login-info');
   const connectPage = $('#connect-page');    // Connect page
+  const connectMessage = $('#connect-info');
 
   // GLOBAL VARIABLES
   let pseudoname;
@@ -22,34 +27,34 @@ $(() => {
 
   // Message to show to this user when other user(s) join/leave
   const addUserMessage = data => {
-    let message = '<p class="message">';
+    let message;
     if(data.numUsers == 1){
       message += `${data.username} joined.`;
     }else{
       message += `${data.username} left.`;
     }
-    message += '</p>';
-    connectPage.append(message);
+    connectMessage.innerText = message;
+    //connectPage.append();
   }
 
   // Message to show this user when he disconnects
   const addDisconnectedMessage = () => {
-    let message = '<p class="message">';
+    let message;
     message += 'You have been disconnected.';
-    message += '</p>';
-    loginPage.append(message);
+    loginMessage.innerText = message;
+    //loginPage.append();
   }
 
   const changeModelMessage = () => {
-    let message = "<p class='model'>";
+    let message;
     if(switched == true){
       message += "Press C to see the other user's character.";
     }
     if(switched == false){
       message += "Press C to see your character.";
     }
-    message += "</p>";
-    connectPage.append(message);
+    connectMessage.innerText = message;
+    //connectPage.append();
   }
 
   // Sets the client's pseudoname
