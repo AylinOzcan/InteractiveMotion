@@ -1,0 +1,17 @@
+{
+  "name": "soket.io-demo",
+  "version": "1.0.0",
+  "description": "Prototype of posenet to three.js for 3MTC Interactive Motion",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aylin Özcan",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow-models/posenet": "^2.2.1",
+    "express": "^4.17.1",
+    "socket.io": "^3.0.3",
+    "three": "^0.123.0"
+  }
+}

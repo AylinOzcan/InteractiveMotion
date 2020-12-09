@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IM - T5 - Aylin Özcan</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div id="login-page">
+    <form>
+      <h3> Welcome to CharacterConnect !</h3>
+      <input type="text" id="pseudoInput" placeholder="Choose a pseudoname" maxlength="14"> 
+      <input type="submit" id="formButton" value="Get connected"></button>
+    </form>
+  </div>
+
+  <main id="connect-page">
+    <h3> Lets connect!</h3>
+    <!-- message switchedModel here -->
+    <!-- messages from who joined/left here -->
+    <!-- maybe posenet camera here -->
+    <video id="video">
+    </video>
+    <canvas></canvas>
+  </main>
+  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="module" src="./js/three.js"></script>
+</body>
+</html>
